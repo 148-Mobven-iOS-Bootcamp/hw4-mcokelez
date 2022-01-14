@@ -1,11 +1,18 @@
 # HW4
 
-## Ödev 1: 
-Bu hafta geliştirdiğimiz projedeki webView ekranında 
-- toolBar’a goForward, goBackward ve open in safari butonları ve özellikleri eklenecektir.
-- string içerisine yazılmış bir html kodunun gösterilmesi sağlanacaktır.
-- default bulunan font değiştirilerek html’in farklı bir fontta gösterilmesi sağlanacaktır. 
+> #### About WebView!
+>
+> - Webview opens with HTML string.
+> - Html file has google link.
+>
+>  *You should **open the link to control the forward and backward bar buttons.***
 
-## Ödev 2: 
-Bu hafta geliştirdiğimiz projedeki mapView ekranında
-- locationAuthorization denied veya restricted ise kullanıcıya extension ile yazılmış bir alertView gösterilecektir. alertView’da cancel ve go to settings butonları bulunacaktır. go to settings butonuna basıldığında kullanıcı geliştirdiğimiz uygulama ayarları ekranına yönlendirilecektir.
+
+> #### About MapView!
+>
+> - if the user denied permissions or choose just one, when app ran again, there are alertView on the screen.
+> - *alertView has a setting button to change the permissions state.*
+> - when state changes, map is present with permission.
+>  
+
+

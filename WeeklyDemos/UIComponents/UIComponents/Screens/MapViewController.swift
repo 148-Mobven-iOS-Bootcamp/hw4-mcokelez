@@ -11,7 +11,15 @@ import MapKit
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-
+    
+    private lazy var locationManager: CLLocationManager = {
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        return locationManager
+    }()
+    
+    var status = CLLocationManager.authorizationStatus()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,13 +44,14 @@ class MapViewController: UIViewController {
     }
 
     func checkLocationPermission() {
-        switch self.locationManager.authorizationStatus {
+        switch status {
         case .authorizedAlways, .authorizedWhenInUse, .authorized:
             locationManager.requestLocation()
         case .denied, .restricted:
-            //popup gosterecegiz. go to settings butonuna basildiginda
-            //kullaniciyi uygulamamizin settings sayfasina gonder
-            break
+            
+           // MARK: - presentSettingsAlert under the Utils/Extensions/UIViewExtensions
+               
+            presentSettingsAlert(with: "Location Permission", message: "Please enable permissions in settings.")
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         @unknown default:
@@ -54,11 +63,7 @@ class MapViewController: UIViewController {
         locationManager.requestLocation()
     }
 
-    private lazy var locationManager: CLLocationManager = {
-        let locationManager = CLLocationManager()
-        locationManager.delegate = self
-        return locationManager
-    }()
+    
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -77,8 +82,14 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
 
     }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkLocationPermission()
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
 
 }
+
+

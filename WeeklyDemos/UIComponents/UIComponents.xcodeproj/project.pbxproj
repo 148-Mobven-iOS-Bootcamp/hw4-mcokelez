@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102BB94B2791EDF300EACA99 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102BB94A2791EDF300EACA99 /* UIViewExtensions.swift */; };
+		10327E86279037D300A52CE1 /* HtmlString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10327E85279037D300A52CE1 /* HtmlString.swift */; };
+		10ADE01F2790A811007C9365 /* MapSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ADE01E2790A811007C9365 /* MapSettingsController.swift */; };
 		23097EC7276F330D00AC8761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097EC6276F330D00AC8761 /* AppDelegate.swift */; };
 		23097EC9276F330D00AC8761 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097EC8276F330D00AC8761 /* SceneDelegate.swift */; };
 		23097ECB276F330D00AC8761 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23097ECA276F330D00AC8761 /* ViewController.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102BB94A2791EDF300EACA99 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		10327E85279037D300A52CE1 /* HtmlString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlString.swift; sourceTree = "<group>"; };
+		10ADE01E2790A811007C9365 /* MapSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSettingsController.swift; sourceTree = "<group>"; };
 		23097EC3276F330D00AC8761 /* UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23097EC6276F330D00AC8761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23097EC8276F330D00AC8761 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				238A3319278972640070B74E /* Person.swift */,
+				10327E85279037D300A52CE1 /* HtmlString.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 				238A332C278AD40D0070B74E /* TabbBarViewController.swift */,
 				238A332E278AE3100070B74E /* WebViewContainerViewController.swift */,
 				238A3330278AF6A80070B74E /* MapViewController.swift */,
+				10ADE01E2790A811007C9365 /* MapSettingsController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 			children = (
 				2391F75027788C8300269D7F /* UIColorExtensions.swift */,
 				238A3324278988260070B74E /* UITableViewExtensions.swift */,
+				102BB94A2791EDF300EACA99 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -236,7 +245,10 @@
 				2391F74C27788A4500269D7F /* DynamicTableViewController.swift in Sources */,
 				238A332F278AE3100070B74E /* WebViewContainerViewController.swift in Sources */,
 				238A33272789AE2D0070B74E /* DynamicCollectionViewController.swift in Sources */,
+				102BB94B2791EDF300EACA99 /* UIViewExtensions.swift in Sources */,
 				238A331A278972640070B74E /* Person.swift in Sources */,
+				10327E86279037D300A52CE1 /* HtmlString.swift in Sources */,
+				10ADE01F2790A811007C9365 /* MapSettingsController.swift in Sources */,
 				238A33292789AF900070B74E /* MyCustomCollectionViewCell.swift in Sources */,
 				23097EC9276F330D00AC8761 /* SceneDelegate.swift in Sources */,
 				238A3322278986690070B74E /* MyCustomTableViewCell.swift in Sources */,

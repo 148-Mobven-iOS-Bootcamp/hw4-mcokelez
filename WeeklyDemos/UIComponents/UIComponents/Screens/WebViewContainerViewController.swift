@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import SafariServices
 
 class WebViewContainerViewController: UIViewController {
 
@@ -21,11 +22,11 @@ class WebViewContainerViewController: UIViewController {
         configureActivityIndicator()
     }
 
-    var urlString = "https://www.google.com"
+//    var urlString = "https://www.google.com"
 
     func configureWebView() {
-        guard let url = URL(string: urlString) else { return }
-        let urlRequest = URLRequest(url: url)
+//        guard let url = URL(string: urlString) else { return }
+//        let urlRequest = URLRequest(url: url)
 
         let preferences = WKPreferences()
         preferences.javaScriptCanOpenWindowsAutomatically = false
@@ -40,7 +41,13 @@ class WebViewContainerViewController: UIViewController {
                             forKeyPath: #keyPath(WKWebView.isLoading),
                             options: .new,
                             context: nil)
-        webView.load(urlRequest)
+        
+//        webView.load(urlRequest)
+       
+        
+    // MARK:  HtmlString file existing under the Models directory. You can review there.
+        webView.loadHTMLString(htmlString, baseURL: nil) /*This code loading page this file.*/
+      
     }
 
     func configureActivityIndicator() {
@@ -60,6 +67,32 @@ class WebViewContainerViewController: UIViewController {
 
     }
 
+    
+    
+// MARK: Toolbars items actions are below.
+    
+    @IBAction func openSafariButtonTapped(_ sender: UIBarButtonItem) {
+    
+        guard let url = URL(string:"https://www.google.com") else {return}
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        
+        
+        
+        // Tried SafariServices how is it, how is working.....
+//        let config = SFSafariViewController.Configuration()
+//        config.entersReaderIfAvailable = true
+//        let vc = SFSafariViewController(url: url, configuration: config)
+//        present(vc, animated: true)
+        
+        
+   
+    }
+    @IBAction func forwardButtonTapped(_ sender: UIBarButtonItem) {
+        webView.goForward()
+    }
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        webView.goBack()
+    }
     @IBAction func reloadButtonTapped(_ sender: UIBarButtonItem) {
         webView.reload()
     }
